@@ -15,9 +15,9 @@ Este repositório possui um projeto de um cartão de guia de embarque, esse proj
 ⚙️ Tecnologias Usadas
 Aqui estão as tecnologias que tornaram este projeto possível:
 
-🔥 <HTML5></HTML5>.
+🔥 HTML5
 
-🌐 <CSS3></CSS3>.
+🌐 CSS 3
 
 💻 Como Rodar o Projeto na sua máquina:
 
