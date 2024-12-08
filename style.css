@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+
+   --cor_primaria: #ffffff;
+   --cor_secundaria: #696868;
+   --cor_strong: #000000;
+   --cor_fundo: #0097b2;
+}
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color:var(--cor_fundo);
+    margin: 0;
+    padding: 20px; 
+}
+h1{
+    margin-bottom: 10px;
+    color: var(--cor_primaria)
+}
+.Ticket{
+    background-color: #fff;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    max-height: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.Ticket::before, .Ticket::after{ 
+    content: ''; 
+    position: absolute;
+     width: 20px; height: 20px; 
+     background-color:var(--cor_fundo); 
+      border-radius: 50%;
+       border: 1px solid #ddd;
+     }
+ .Ticket::before { 
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%); 
+    } 
+ .Ticket::after { 
+    top: 50%; 
+    right: -10px; 
+    transform: translateY(-50%);
+ }
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color:var(--cor_secundaria);
+}
+.header strong{
+    color: var(--cor_strong);
+}
+.local{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px dotted #ddd;
+    padding:10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: var(--cor_secundaria);
+}
+.local strong{
+    font-size: 40px;
+    color: var(--cor_strong);
+}
+.passageiro{
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dotted #ddd;
+    padding: 20px;
+}
+.qrcode{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 40px;
+    font-size: 20px;
+}
+.qrcode span{
+    background-color:#5ce1e6;
+    opacity: 10px;
+    width: 50px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+.infoqrcode{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.imgqrcode img{
+   width:100px;
+}
+@media (max-width: 768px) {
+    .Ticket {
+        width: 90%; 
+        padding: 15px;
+    }
+    .qrcode {
+        flex-direction: column; 
+        gap: 20px; 
+    }
+    .infoqrcode {
+        font-size: 16px; 
+    }
+
+    h1 {
+        font-size: 24px; 
+    }
+    .header, .local, .passageiro {
+        flex-direction: column; 
+        align-items: center;
+    }
+}
+@media (max-width: 480px) {
+    .Ticket {
+        width: 100%; 
+        padding: 10px; 
+    }
+    h1 {
+        font-size: 20px; 
+    }
+    .qrcode {
+        gap: 10px; 
+    }
+    .local {
+        padding: 10px 0;
+    }
+}
